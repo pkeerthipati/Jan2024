@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-grid slds-wrap top-container">
+        <label class="slds-col slds-size_1-of-1 heading white-color">{label.KpCoursepage}</label>
+        <label class="slds-col slds-size_1-of-1 sub-heading white-color">{label.KpCoursepage} {usrName}! {label.KpPrtalCourseSelect}</label>
+    </div>
+    <div class="searchMrg">
+        <c-student-portal-course-search-lwc onsearchcourse={passKeytoTile} onsearchcoursefilter={passFiltertoTile} onpopupopen={passPopUpValToTile} ></c-student-portal-course-search-lwc> 
+    </div>
+    
+    <div class="searchMrg">
+        <c-student-portal-course-cart-lwc onremovecourse={passCIdToTile} onremovecart={removeCourseCart} onremovesalestokencart={removeSalesTokenCourseCart} course-s={selCou} issalest={isSalesToken} trainingmanager={trainingM}></c-student-portal-course-cart-lwc> <!--get-course-sel-val={getCSelVal}-->
+    </div>
+    
+    <div class="">
+        <c-student-portal-course-tiles-lwc oncoursesel={passDataToCart}></c-student-portal-course-tiles-lwc> 
+    </div>
+</template>

@@ -1,0 +1,51 @@
+<template>
+    <div if:false={isSalesToken}>
+        <div class="slds-grid slds-wrap wrapper-mrg" data-id="tile-wrapper">
+            <template for:each={courseData} for:item="product">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-var-m-right_large card-container" key={product.courseId}>
+                <div class="top-container" data-item={product.courseId} > <!--style={backgroundImageUrl} background-image: linear-gradient(to bottom, rgba(33, 33, 33, 0.4), rgba(33, 33, 33, 0.4)), url('/sfc/servlet.shepherd/version/download/0689D000001EUWlQAO')"-->
+                    <div class="text-container">
+                        <div class="code-text">{product.courseCode}</div>
+                        <div class="subject-text mrgTop3">{product.courseName}</div>
+                        <div class="slds-grid slds-wrap">
+                            <div class="ve-text mrgTop3 slds-size_1-of-2">{product.courseType}</div>
+                            <div class="fee-text mrgTop3 slds-size_1-of-2" if:true={product.feeHelpAvailable}>
+                                {label.KpCourseTilefee}
+                                <!-- <span class="slds-form-element__label fee-text">FEE - Help Available</span> -->
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bottom-container">
+                    <div class="course-des-text">{product.courseDescription}</div> 
+                    <div class="slds-grid mrg-top10">
+                        <button if:true={product.isHigherEdu} type="submit" class="slds-size_1-of-2 btn-cls btn-select" onclick={handleEnroll}  data-id={product.courseId}>{label.KpCourseTileEnroll}</button>
+                        <button if:false={product.isHigherEdu} type="submit" class="slds-size_1-of-2 btn-cls btn-select changeBtnVal" onclick={handleSelect} data-id={product.courseId}>{label.KpCourseTileEnroll}</button>
+                        <button type="" class="slds-size_1-of-2 btn-cls btn-learn" onclick={handleLearnMore} data-item={product.courseLearnMore}>{label.KpCourseTileLearn}</button>
+                    </div>
+                </div>
+            </div>
+        </template>
+        </div>
+        <template if:true={isLoading}>
+            <div class="demo-only demo-only_viewport demo--inverse spinner">
+               <div class="slds-spinner_container slds-is-fixed">
+                 <div role="status" class="slds-spinner slds-spinner_medium">
+                   <span class="slds-assistive-text">Loading</span>
+                   <div class="slds-spinner__dot-a"></div>
+                   <div class="slds-spinner__dot-b"></div>
+                 </div>
+               </div>
+             </div>
+           </template>
+        <div class="slds-grid slds-wrap wrapper-mrg slds-grid_align-center mrgTop3" data-id="loadBtnDiv">
+            <button type="submit" class="btn-loadmore" onclick={handleLoad} data-id="loadBtnId">{label.KpCourseTileload}</button>
+        </div>
+        <div class="slds-grid slds-wrap  mrgTop3 searchText searchValue wrapper-mrg " data-id="noSearch">
+            <label class="slds-size_11-of-12">{label.KpCourseTileValue}</label>
+        </div>
+        <br />
+    </div>
+    
+</template>

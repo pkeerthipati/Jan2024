@@ -1,0 +1,50 @@
+/*------------------------header starts----------------------------*/
+
+.top-container{
+    padding: 2% 12%;
+    background: #240F6E;
+}
+.white-color{
+    color: #FFFFFF;
+}
+.heading{
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 5%;
+}
+.sub-heading{
+    font-weight: 400;
+    font-size: 17px;
+}
+.searchMrg{
+    margin: 1% 12% 0 12%;
+}
+/*------------------------header ends----------------------------*/
+
+@media only screen and (min-width : 569px) and (max-width: 768px),
+only screen and (min-device-width : 569px) and (max-device-width : 768px) {
+    .top-container{
+        padding: 1% 6%;
+    }
+    .searchMrg{
+        margin: 1% 6% 0 6%;
+    }
+}
+
+/*-----------------For Mobile devices--------------*/
+@media only screen and (max-width : 568px),
+only screen and (max-device-width : 568px){
+    .top-container{
+        padding: 3% 5%;
+    }
+    .heading{
+        font-size: 33px;
+        margin-top: 3%;
+    }
+    .sub-heading{
+        font-size: 14px;
+    }
+    .searchMrg{
+        margin: 3% 3% 0 2%;
+    }
+}

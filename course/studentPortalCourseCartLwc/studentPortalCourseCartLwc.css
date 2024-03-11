@@ -1,0 +1,132 @@
+.multiVal-msg{
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.btn-cls{
+    width: 55%;
+    height: 36px;
+    background: #005DE8;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 25%;
+    color: #ffffff;
+    border: none;
+    margin-top:2%;
+}
+.cart-message{
+    
+    font-weight: 600;
+    margin-left: 2%;
+    color: #ffffff;
+    
+}
+.spinner{
+    /* height:6rem; */
+    background-color:#240F6E;
+    position:relative
+  }
+.btn-cls-sales{
+    width:48%;
+    height: 36px;
+    background: #005DE8;
+    border-radius: 20px;
+    font-weight: 600;
+    /* margin-left: 25%; */
+    color: #ffffff;
+    border: none;
+    /* margin-top:2%; */
+}
+.gap2{
+    gap:2%;
+    margin-top: 4%;
+}
+.self-align-center{
+    align-self: center;
+    text-align: center;
+}
+.mrg-top2{
+    margin-top:2%;
+}
+.multiVal-container{
+    padding: 1% 2%;
+    height:auto;
+    background:#240F6E;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+    width:100%;
+}
+.multiVal-container.active{
+    width:76%;
+}
+.card-container{
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin:2%;
+    height:auto;
+}
+.course-text{
+    color: #212121;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 1%;;
+}
+.trainingM-text{
+    color: #ffffff;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+.close-icon{
+    --slds-c-icon-color-background: none;
+    --slds-c-icon-color-foreground: #212121;
+    position: absolute;
+    right: 1%;
+    text-align: right;
+    height: 100%;
+    top: 0;
+}
+/*------------------For Laptop and small screen devices----------*/
+@media only screen and (min-width : 768px ) and (max-width: 1024px),
+only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .btn-cls{
+        width: 80%;
+        margin-left: 17%;
+    }
+    .close-icon{
+    }
+    .course-text{
+        width: 82%;
+    }
+    .multiVal-container.active{
+        width:64%;
+    }
+}
+/*---------------For Tablets and iPads-----------------*/
+@media only screen and (min-width : 569px) and (max-width: 768px),
+only screen and (min-device-width : 569px) and (max-device-width : 768px) {
+    .course-text{
+        width: 86%;
+    }
+    .close-icon{
+    }
+}
+/*-----------------For Mobile devices--------------*/
+@media only screen and (max-width : 568px),
+only screen and (max-device-width : 568px){
+    .course-text{
+        width: 80%;
+    }
+    .card-container{
+        padding:1%;
+    }
+    .mrg-bottom4{
+        margin-bottom: 4%;
+    }
+    .mrg-top4{
+        margin-top: 4%;
+    }
+}

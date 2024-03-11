@@ -1,0 +1,61 @@
+<template>
+    <div if:true={showCart}> 
+        <div class="slds-grid slds-wrap searchMrg multiVal-container" if:false={salesToken} data-id="cart-container">
+            <div class="slds-size_12-of-12 slds-medium-size_8-of-12 slds-large-size_8-of-12">
+                <template for:each={coursedata} for:item="product">
+                    <div class="slds-col card-container" key={product.courseId}>
+                        <div class="slds-grid slds-wrap slds-input-has-icon">
+                            <label class="slds-size_11-of-12 slds-medium-size_11-of-12 slds-large-size_11-of-12 course-text">{product.courseName} </label>
+                            <lightning-icon class="slds-icon slds-input__icon_right slds-grid slds-grid_vertical-align-center slds-grid_align-center close-icon" 
+                            data-id={product.courseId} onclick={removeCourse} icon-name="action:close" size="x-small" alternative-text="icon"></lightning-icon>
+                        </div>
+                    </div>
+                </template>
+                <div class="slds-grid slds-wrap ">
+                    <label class="cart-message">{label.KpCourseCartMessage}</label>
+                </div>                
+            </div>
+            <div class="slds-size_12-of-12  slds-medium-size_4-of-12 slds-large-size_4-of-12">
+                <button type="" class="btn-cls" onclick={handleEnroll} data-id="veenrol">{label.KpPortalcart}</button>
+                <button type="" class="btn-cls mrg-top2" onclick={handleRemoveSelection} data-id="">{label.KpPortalremove}</button>
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap searchMrg multiVal-container" if:true={salesToken} data-id="salestoken-cart">
+            <div class="slds-size_12-of-12 slds-medium-size_8-of-12 slds-large-size_8-of-12">
+                <template for:each={coursedata} for:item="salestokenproduct">
+                    <div class="slds-col card-container" key={salestokenproduct.courseId}>
+                        <div class="slds-grid slds-wrap slds-input-has-icon">
+                            <label class="slds-size_11-of-12 slds-medium-size_11-of-12 slds-large-size_11-of-12 course-text">{salestokenproduct.courseName} </label>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="slds-size_12-of-12  slds-medium-size_4-of-12 slds-large-size_4-of-12 self-align-center">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-size_1-of-1 mrg-top4">
+                        <label class="trainingM-text">{label.KpCourseCartTM} </label>
+                        <label class="trainingM-text">{trainingManagerName}</label>
+                    </div>
+                    <div class="slds-size_1-of-1 mrg-bottom4 ">
+                        <div class="slds-grid slds-wrap gap2">
+                            <button type="" class="btn-cls-sales slds-size_1-of-2" onclick={handleEnroll} data-id="stenrol">{label.KpPortalcart}</button>
+                            <button type="" class="btn-cls-sales slds-size_1-of-2" onclick={handleSalesCancel} data-id="">{label.KpCourseCartCancel}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <template if:true={isLoading}>
+            <div class="demo-only demo-only_viewport demo--inverse spinner">
+               <div class="slds-spinner_container slds-is-fixed">
+                 <div role="status" class="slds-spinner slds-spinner_medium">
+                   <span class="slds-assistive-text">Loading</span>
+                   <div class="slds-spinner__dot-a"></div>
+                   <div class="slds-spinner__dot-b"></div>
+                 </div>
+               </div>
+             </div>
+           </template>
+    </div>
+    
+</template>

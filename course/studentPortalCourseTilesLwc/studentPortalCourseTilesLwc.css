@@ -1,0 +1,219 @@
+.card-container{
+    width:30%;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+    margin-top:3%;
+}
+.card-container.active{
+    width:29%;
+}
+.spinner{
+    /* height:6rem; */
+    background-color:#240F6E;
+    position:relative
+  }
+.wrapper-mrg{
+    margin-left: 12%;
+    margin-right: 8%;
+}
+.wrapper-mrg.active{
+    margin-left: 12%;
+    margin-right: 26%;
+}
+.top-container{
+    padding: 2% 4%;
+    color: #FFFFFF;
+    background-size: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.text-container{
+    width: 91%;
+    margin-left: 3%;
+    margin-top: 28%;
+}
+.code-text{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    height:20px;
+}
+
+.mrgTop3{
+    margin-top: 3%;
+}
+.subject-text{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    height: 85px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.ve-text{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+}
+.fee-text{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: right;
+    color: #FFFFFF;
+}
+.bottom-container{
+}
+
+.course-des-text{
+   font-style: normal;
+   font-weight: 400;
+   font-size: 13px;
+   line-height: 20px;
+   color: #212121;
+   margin: 5%;
+   height: 62px;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
+}
+
+.btn-cls{
+    width: 40%;
+    height: 44px;
+    border-radius: 8px;
+}
+.btn-select{
+    background: #240F6E;
+    color: #FFFFFF;
+    margin: 0 5% 10% 5%;
+    border: none;
+}
+.btn-select:hover{
+    background: #422D8A;
+}
+.btn-learn{
+    border: 1px solid #240F6E;
+    color: #240F6E;
+    background-color: #FFFFFF;
+} 
+
+.btn-loadmore{
+    background: #240F6E;
+    color: #FFFFFF;
+    height: 50px;
+    border-radius: 8px;
+    width:19%;
+    border: none;
+}
+.btn-loadmore:hover{
+    background: #422D8A;
+}
+.btn-loadmore.active{
+    margin-right: 30%;
+}
+.mrg-top10{
+    margin-top: 10%;
+}
+.searchText{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #212121;
+}
+.searchValue{
+    display:none;
+}
+/*------------------For Laptop and small screen devices----------*/
+@media only screen and (min-width : 768px ) and (max-width: 1024px),
+only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .wrapper-mrg.active{
+        margin-left: 12%;
+        margin-right: 9%;
+    }
+    .card-container{
+        width: 46%;
+    }
+    .card-container.active{
+        width: 33%;
+    }
+
+    .text-container{
+        width: 96%;
+        margin-top: 22%;
+    }
+    .course-des-text{
+        height: 64px;
+    }
+    .btn-loadmore{
+        width:25%;
+    }
+    .btn-loadmore.active{
+        margin-right: 30%;
+    }
+}
+
+/*---------------For Tablets and iPads-----------------*/
+@media only screen and (min-width : 569px) and (max-width: 768px),
+only screen and (min-device-width : 569px) and (max-device-width : 768px) {
+    .wrapper-mrg{
+        margin-left: 6%;
+        margin-right: 0%;
+    }
+    .wrapper-mrg.active{
+        margin-left: 6%;
+        margin-right: 30%;
+    }
+    .card-container{
+        width: 45%;
+    }
+    .card-container.active{
+        width:42%;
+    }
+    .text-container{
+        width: 89%;
+        margin-top: 26%;
+    }
+    .btn-loadmore{
+        width:25%;
+    }
+    .btn-loadmore.active{
+        margin-right: 35%;
+    }
+}
+
+/*-----------------For Mobile devices--------------*/
+@media only screen and (max-width : 568px),
+only screen and (max-device-width : 568px){
+    .wrapper-mrg{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .wrapper-mrg.active{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .card-container{
+        width: 100%;
+        margin-top: 7%;
+    }
+    .card-container.active{
+        width: 100%;
+    }
+    .text-container{
+        margin-top: 15%;
+    }
+    .btn-loadmore{
+        width:50%;
+    }
+    .btn-loadmore.active{
+        margin-right: 0%;
+    }
+}

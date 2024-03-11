@@ -1,0 +1,278 @@
+/*------------------------Search Bar starts----------------------------*/
+
+.search-box{ 
+    display: flex;
+    flex-direction: row;
+}
+.search-box.active{
+  /* width:76%; */
+  width:68%;
+ }
+.search-bar{
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: white;
+    box-shadow: 0px 4px 16px rgb(22 21 21 / 15%);
+    padding-left: 2%;
+}
+
+.search-icon{
+    position: absolute;
+    right: 1%;
+    height:100%;
+}
+input:focus{
+  outline: none !important;
+  border: 1px solid #a8c9e4;
+}
+
+.hamburger-box{
+    margin-left: 1%;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: white;
+    box-shadow: 0px 4px 16px rgb(22 21 21 / 15%);
+    width: 7%;
+    padding-top: 17px;
+    padding-right: 1%;
+    height: 50px;
+}
+ .hamburger-lines {
+    height: 17px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .hamburger-lines .line {
+    height: 2px;
+    background: #0e2431;
+  }
+  
+  .hamburger-lines .line1 {
+    width: 32px;
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .hamburger-lines .line2 {
+    width: 22px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hamburger-lines .line3 {
+    width: 12px;
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  } 
+  .popupBox{
+    width: 23%;
+    height: auto;
+    position: absolute;
+    right: 5%;
+    /* margin-top: 4%; */
+    border-radius: 3px;
+    padding: 1%;
+    z-index: 1;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+  }
+  .popup-header-text{
+    font-size: 16px;
+    color: #212121;
+    font-weight: 700;
+    font-family: 'Open Sans';
+  }
+  .slds-checkbox .slds-checkbox__label .popup-text{
+    font-family: 'Open Sans';
+    margin-left:2%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: #212121; 
+  }
+.filter-text{
+    font-size: 14px;
+    color: #212121;
+    font-weight: 500;
+    font-family: 'Open Sans';
+    margin-left:2%;
+  }
+.slds-checkbox{
+    --slds-c-checkbox-color-background: #E0E0E0;;
+    --slds-c-checkbox-color-border:#212121;
+    --slds-c-checkbox-shadow-focus: none;
+    --slds-c-checkbox-color-border-focus:#212121;
+    --slds-c-checkbox-color-border-checked:#240F6E;
+    --slds-c-checkbox-mark-color-foreground: #ffffff;
+    --slds-c-checkbox-color-background-checked: #240F6E;
+  }
+  .btn-cls{
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Open Sans';
+      color: #FFFFFF;
+      height: 40px;
+      background-color: #240F6E;
+      width: 100%;
+      align-items: center;
+      display: block;
+      border-radius: 25px;
+      border: transparent;
+  }
+  .btn-cls:hover{
+    background-color: #422D8A;
+  }
+  .text-link{
+    color: #007DB3;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    padding-left: 1%;
+  }
+  .text-link:hover{
+    text-decoration: underline;
+    color: #00A4D9;
+  }
+  .clearall-align{
+    text-align: right;
+  }
+.box-border{
+    border-bottom: 1px solid #E0E0E0;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding-bottom: 3%;
+}
+.question-box1{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgb(22 21 21 / 15%);
+  border-radius: 8px;
+  border: white;
+  width: 7%;
+  margin-left: 1%;
+  height: 50px;
+}
+.svg-icon{
+  width:22px;
+  cursor: pointer;
+}
+.gridBox{
+  height: 100%;
+}
+/*---------------------Tooltip starts-----------------------------------*/
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 298px;
+    background-color: #E0E0E0;
+    border-radius: 0;
+    z-index: 999;
+    font-weight: normal;
+    font-size: 12px;
+    position: absolute;
+    right: 19%;
+    margin-top: 0.5%;
+    font-family: 'Open Sans';
+    color: #212121;
+  }
+  .tooltip .tooltiptext.active{
+    right:30%;
+  }
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  }
+.tooltip:click .tooltiptext {
+  visibility: visible;
+  
+}
+
+/*-----------------------ToolTip ends-----------------------------------*/
+/*------------------------Search Bar ends----------------------------*/
+/*------------------For Laptop and small screen devices----------*/
+@media only screen and (min-width : 768px ) and (max-width: 1024px),
+only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .hamburger-box{
+    width: 11%;
+  }
+  
+.question-box1{
+  width: 11%;
+  margin-left: 1%;
+}
+  .popupBox{
+    width:28%;
+    right: 3%;
+  }
+  .search-box.active{
+    /* width:64%; */
+    width:60%;
+  }
+  .tooltip .tooltiptext{
+    width: 280px;
+    right: 22%;
+  }
+  .tooltip .tooltiptext.active{
+    right:34%;
+  }
+}
+
+/*---------------For Tablets and iPads-----------------*/
+@media only screen and (min-width : 569px) and (max-width: 768px),
+only screen and (min-device-width : 569px) and (max-device-width : 768px) {
+    .hamburger-box{
+        margin-left: 1%;
+        width: 11%;
+        padding-right: 1%;
+    }
+    .question-box1{
+      width: 11%;
+      margin-left: 1%;
+    }
+    .popupBox{
+      width:32%;
+      right: 2%;
+    }
+    .search-box.active{
+      /* width:64%; */
+      width: 53%;
+    }
+    .tooltip .tooltiptext{
+      right:18%;
+    }
+    .tooltip .tooltiptext.active{
+      right:37%;
+    }
+}
+
+/*-----------------For Mobile devices--------------*/
+@media only screen and (max-width : 568px),
+only screen and (max-device-width : 568px){
+    .hamburger-box{
+        width: 11%;
+        padding-top: 4%;
+        padding-right: 2%;
+        margin-left: 1%;
+    }
+    .question-box1{
+      width: 11%;
+      margin-left: 1%;
+      /* margin-top: 1%; */
+    }
+    .popupBox{
+      width: 50%;
+      right: 4%;
+      padding: 2%;
+    }
+    .box-border{
+      margin-top: 4%;
+      margin-bottom: 5%;
+      padding-bottom: 5%;
+    }
+    .tooltip .tooltiptext{
+      right:16%;
+    }
+}
